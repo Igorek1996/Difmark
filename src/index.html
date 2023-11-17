@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Webpack</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="" class="form">
+        <div class="form__wrapper">
+          <h2 class="form__title">QUICK BUY Game CURRENCY</h2>
+          <section class="form__section js-form__section">
+            <h3 class="form__subtitle">Game details</h3>
+            <div class="form__block">
+              <label class="form__label form__label_cursor js-dropdown">
+                <span class="form__label-row">
+                  <!--add to form__dropdown before class="active"-->
+                  <span class="form__dropdown">
+                    <span
+                      class="form__item js-form__item"
+                      data-selectedcurrency="EU"
+                    >
+                      Currency
+                    </span>
+                    <span class="form__dropdown-menu js-dropdown__menu">
+                      <span class="form__dropdown-list">
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          data-gamecurrency="EU"
+                          >World of Warcraft (EU)</a
+                        >
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          data-gamecurrency="DE"
+                          >World of Warcraft (DE)</a
+                        >
+                      </span>
+                    </span>
+                  </span>
+                  <span class="form__icon form__arrow js-arrow">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#chevrone"></use>
+                    </svg>
+                  </span>
+                  <span class="form__icon form__checked">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+              <label class="form__label form__label_cursor js-dropdown">
+                <span class="form__label-row">
+                  <!--add to form__dropdown before class="active"-->
+                  <span class="form__dropdown">
+                    <span class="form__item js-form__item"> Server </span>
+                    <span class="form__dropdown-menu js-dropdown__menu">
+                      <span class="form__dropdown-list">
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          >Europe</a
+                        >
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          >North America</a
+                        >
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          >Asia</a
+                        >
+                      </span>
+                    </span>
+                  </span>
+                  <span class="form__icon form__arrow js-arrow">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#chevrone"></use>
+                    </svg>
+                  </span>
+                  <span class="form__icon form__checked">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+              <label class="form__label form__label_cursor js-dropdown">
+                <span class="form__label-row">
+                  <span class="form__dropdown">
+                    <span class="form__item js-form__item"> Fraction </span>
+                    <span class="form__dropdown-menu js-dropdown__menu">
+                      <span class="form__dropdown-list">
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          >Alliance</a
+                        >
+                        <a
+                          href="#"
+                          class="form__dropdown-item js-dropdown__item"
+                          >Horder</a
+                        >
+                      </span>
+                    </span>
+                  </span>
+                  <span class="form__icon form__arrow js-arrow">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#chevrone"></use>
+                    </svg>
+                  </span>
+                  <span class="form__icon form__checked">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </section>
+          <section class="form__section js-form__section disabled">
+            <h3 class="form__subtitle">game currency</h3>
+            <div class="form__block form__block_rad form__block_gap0">
+              <label class="form__label form__label_radiusTop">
+                <span class="form__label-title"> Get: </span>
+                <span class="form__label-row">
+                  <span class="form__icon">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#two-coins"></use>
+                    </svg>
+                  </span>
+                  <span class="form__field">
+                    <input
+                      type="number"
+                      class="form__input form__number"
+                      value="1000.00"
+                      id="gameCurrency"
+                      min="100"
+                      max="10000"
+                      data-inputmask-regex="^(10\d|1[1-9]\d|[2-9]\d{2}|[1-9]\d{3}|10000)$"
+                    />
+                  </span>
+                  <span class="form__label-text">K Gold</span>
+                </span>
+              </label>
+              <span class="form__range">
+                <input
+                  id="range"
+                  class="form__range-slider"
+                  type="range"
+                  min="100"
+                  max="10000"
+                  value="1000"
+                  name="range"
+                  step="1"
+                />
+              </span>
+              <label class="form__label form__label_radiusBottom">
+                <span class="form__label-title"> Pay: </span>
+                <span class="form__label-row">
+                  <span class="form__field">
+                    <span class="form__input form__number">
+                      <span class="js-currency">€</span>
+                      <span class="js-sum">100.00</span>
+                    </span>
+                  </span>
+                  <span class="form__language">
+                    <span
+                      class="form__language-wrap js-languages"
+                      data-location="EUR"
+                    >
+                      <span
+                        class="form__language-item js-language active"
+                        data-lang="EUR"
+                      >
+                        <span class="form__icon form__language-icon">
+                          <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#eu"></use>
+                          </svg>
+                        </span>
+                        <span class="form__language-name">EUR</span>
+                      </span>
+                      <span
+                        class="form__language-item js-language"
+                        data-lang="USD"
+                      >
+                        <span class="form__icon form__language-icon">
+                          <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#usa"></use>
+                          </svg>
+                        </span>
+                        <span class="form__language-name">USD</span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </section>
+        </div>
+        <div class="form__bottom">
+          <button href="#" class="btn form__btn js-btn" disabled>
+            Continue
+          </button>
+        </div>
+        <div class="form__popup js-popup">
+          <div class="form__popup-top">
+            <div class="form__popup-title">Information</div>
+            <div class="form__icon form__popup-close js-close">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#close"></use>
+              </svg>
+            </div>
+          </div>
+          <label class="form__label form__label_radius0">
+            <span class="form__subtitle"> character name: </span>
+            <span class="form__field">
+              <input
+                id="name"
+                type="text"
+                class="form__input"
+                placeholder="Enter your character name"
+                data-inputmask-regex="^[a-zA-Z]+$"
+                data-inputmask-clearmaskonlostfocus="false"
+              />
+            </span>
+          </label>
+          <button type="submit" href="#" class="btn form__btn">
+            buy currency
+          </button>
+        </div>
+        <div class="form__overlay js-overlay"></div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+  </body>
+</html>
